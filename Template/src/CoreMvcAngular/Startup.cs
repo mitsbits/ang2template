@@ -22,7 +22,7 @@ namespace CoreMvcAngular
             Configuration = builder.Build();
         }
 
-        public IConfigurationRoot Configuration { get; }
+        private IConfigurationRoot Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -37,7 +37,15 @@ namespace CoreMvcAngular
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
             app.UseStaticFiles();
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=home}/{action=Index}/{id?}");
+                routes.MapSpaFallbackRoute(
+                    name: "spa-fallback",
+                    defaults: new { controller="angapp", action = "Index" });
+            });
         }
     }
 }
