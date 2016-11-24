@@ -251,5 +251,6 @@ paket-files/
 .idea/
 *.sln.iml
 #remove generated files
-*.js
+
 *.map
+libs
