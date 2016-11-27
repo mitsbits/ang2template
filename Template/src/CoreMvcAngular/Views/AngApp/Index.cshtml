@@ -1,7 +1,10 @@
 @{
     ViewData["Title"] = "Angular Home Page";
 }
-
+@section headbase{
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    @*<base href="/angapp"/>*@
+}
 @section head
 {
     <script src="libs/core-js/shim.min.js"></script>
@@ -13,5 +16,6 @@
         System.import('app').catch(function (err) { console.error(err); });
     </script>
 }
-<h1>Angular Home</h1>
-<my-app>Loading...</my-app>
+
+    <ang></ang>
+

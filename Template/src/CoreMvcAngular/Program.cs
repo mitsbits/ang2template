@@ -13,6 +13,7 @@ namespace CoreMvcAngular
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
+                .UseUrls("http://localhost:28895")
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()

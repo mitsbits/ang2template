@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.AspNetCore.Mvc": "1.1.0",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
@@ -15,7 +15,8 @@
       "version": "1.1.0",
       "type": "default"
     },
-    "Microsoft.AspNetCore.SpaServices": "1.1.0-beta-000001"
+    "Microsoft.AspNetCore.SpaServices": "1.1.0-beta-000001",
+"Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final"
   },
 
   "tools": {
